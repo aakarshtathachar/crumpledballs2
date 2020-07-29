@@ -8,6 +8,7 @@ class Paper {
         }
       this.body = Bodies.circle(x,y,r,options);
       this.r = r;
+      this.image = loadImage("sprites/paper.png");
       World.add(world, this.body);
     }
     display(){
@@ -16,9 +17,9 @@ class Paper {
       push();
       translate(pos.x,pos.y);
       rotate(angle);
-      ellipseMode(RADIUS);
+      imageMode(CENTER);
       fill(255);
-      ellipse(0, 0, 10);
+      image(this.image,0, 0, 50,50);
       pop();
     }
   };

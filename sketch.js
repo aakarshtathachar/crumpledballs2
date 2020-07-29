@@ -23,7 +23,7 @@ function setup() {
 
 	//Create the Bodies Here.
 	ground=new Ground(600,680,1200,20);
-	paper=new Paper(50,670,20);
+	paper=new Paper(50,670,20,20);
     dustbin = new Dustbin(1000,650);
 
 	Engine.run(engine);
@@ -32,7 +32,7 @@ function setup() {
 
 
 function draw() {
-  background(0);
+  background(255);
   ground.display();
   paper.display();
   dustbin.display();
